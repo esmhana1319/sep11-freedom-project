@@ -29,6 +29,45 @@ this is called by an interval of 60 times per second which is set by impact in o
 Now, knowing what impact is, its classes, and a couple of its methods my next objective is to try making a simple pong game using a tutorial i found on their website.  
 
 
+### 10/25/24 
+
+#### The weltmeister 
+
+the files within the impact js documentation are vast, which is initially very intimidating, but the first thing to do is break them down to understand what they are used for and why they are important. The most vital of them all is the weltmeister. 
+ 
+![Screenshot 2024-10-27 9 21 43 PM](https://github.com/user-attachments/assets/1d5a6e49-e7cb-4e49-8b74-6e949db37c48)
+
+the weltmeister is a level editor used by impact js to preview the code and create levels with its designing abilities. Its shortcuts that i need to keep noted are listed below 
+
+1. hold right or ctrl to drag view
+
+2. left mouse drags selected tile or entity depending on layer
+   
+3. space toggles the selection of the previous two
+
+4. backspace or del will delete the selected entity (your sprite)
+
+5. C clones the entity (good for mobs or enemy entities)
+
+6. Z and Y are undo and redo buttons
+
+7. G toggles the grid (this is for the background map of your game)
+
+8. holding shift and left mouse button will enable you to select a part of the map to make your "brush" (by this they mean you can select a couple of tiles and draw them in another area in bulk)
+
+#### weltmeister layers 
+
+weltmeister has different layers that can be used for the purpose of storing parts of your game there. The dimension of these layers along with their size can be changed, but not undone (something i need to keep in mind) 
+
+![Screenshot 2024-10-27 9 45 45 PM](https://github.com/user-attachments/assets/587458ab-9977-45f3-88e8-47d6d14a07a1)
+
+In the screenshot above you can see the entities layer, which stores the sprites, and the add new layer button. I think the best way to view weltmeister is similar to the drawing apps i use to make art, or the mspaint website i use to doodle in class. With the weltmeister i am given a good view of how my game is previewed and a quicker way to layout my setting. 
+
+#### concerns 
+
+There are not much materials for learning i can go off of in comparison to kaboom, and most of the learning i must do is through looking at the website documents rather than peers or alumni, so i am slightly worried. Although a good resource i have is slack, asking for help on there is quite intimidating so ill just thug it out till i reach a sense of familiarity with what im working with. Luckily for me impact is proving to be quite fun, so im sure the project will be something i can look on later and be proud of. 
+
+
 <!-- 
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
