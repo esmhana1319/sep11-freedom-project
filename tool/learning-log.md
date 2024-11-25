@@ -77,6 +77,69 @@ the [tutorial](https://www.youtube.com/watch?v=hMXWImAuim8&t=3s) i followed on t
 
 The only concern i have at the moment is that many of the fundamentals used within the video are unrecognizable to what we have learned so far in javascript basics, aside from the function used to animate the puck entities movement. But there are many tutorials i can boot up that can help with that so ill just keep watching and tinkering till i can break down everything.
 
+11/24/24 (apologies for no screenshots, my computer has been acting up and wont allow me to drop pngs into the editor)
+
+### weltmeister cont
+
+i figured out how to properly preview the weltmeister on the ide without using replit, which is this command below that is put into the terminal
+
+```console
+php -S localhost:8000
+```
+
+after using this command, which works similarly to http-server by making a directory available on localhost:8000; ie good for opening static websites or in this case the weltmeister
+
+### Entity
+
+in order to make "sprites" or characters within your game, impact uses ig.entity to define the parameters and properties it will have. This can range from collison to the general size of the entity
+
+directly sourced from documentation**
+
+```js
+// Create your own entity, subclassed from ig.Enitity
+EntityPlayer = ig.Entity.extend({
+
+    // Set some of the properties
+    collides: ig.Entity.COLLIDES.ACTIVE,
+    type: ig.Entity.TYPE.A,
+    checkAgainst: ig.Entity.TYPE.B,
+
+    size: {x: 16, y: 16},
+    health: 50,
+
+    // Load an animation sheet
+    animSheet: new ig.AnimationSheet( 'media/player.png', 16, 16 ),
+
+    init: function( x, y, settings ) {
+        // Add animations for the animation sheet
+        this.addAnim( 'idle', 0.1, [0,1,2] );
+        this.addAnim( 'jump', 0.1, [3,4,5] );
+
+        // Call the parent constructor
+        this.parent( x, y, settings );
+    }
+
+    update: function() {
+        // This method is called for every frame on each entity.
+        // React to input, or compute the entity's AI here.
+
+        if( ig.input.pressed('jump') ) {
+            this.vel.y = -100;
+            this.currentAnim = this.anims.jump.rewind();
+        }
+
+        // Call the parent update() method to move the entity
+        // according to its physics
+        this.parent();
+    }
+});
+```
+ the code above from their document page is the framework for defining an entity within your game, which monitors its size, collision, and calls a conditional for movement. in the pong game from the last learning log, the entitys were defined with this same framework for the pong and paddle. in order for the physics of the game to function, they must be defined first through ig.entity
+
+ ### next objectives
+
+ use ig.entity to define an entity for practice, and try making the entity move in weltmeister 
+
 
 
 <!--
