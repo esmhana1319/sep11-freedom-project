@@ -138,9 +138,56 @@ EntityPlayer = ig.Entity.extend({
 
  ### next objectives
 
- use ig.entity to define an entity for practice, and try making the entity move in weltmeister 
+ use ig.entity to define an entity for practice, and try making the entity move in weltmeister
 
+### 12/8/24
 
+### Entity cont
+
+in the <code>entities</code> folder of impact, you can insert the files for your entities; js files; that will establish their animation values, PNG, scale, speed, etc.
+
+a simple entity that gets moved around by colliding with other entities will look somewhat like this <code>puck.js folder</code>
+
+```js
+ig.module(
+	'game.entities.puck'
+)
+.requires(
+	'impact.entity'
+)
+.defines(function(){
+
+EntityPuck = ig.Entity.extend({
+
+	size: {x:48, y:48},
+	collides: ig.Entity.COLLIDES.ACTIVE,
+
+	animSheet: new ig.AnimationSheet( 'media/puck.png', 48, 48 ),
+
+	bounciness: 1,
+
+	init: function( x, y, settings ) {
+		this.parent( x, y, settings );
+
+		this.addAnim( 'idle', 0.1, [0,1,2,3,4,4,4,4,3,2,1] );
+
+		this.vel.x = -200;
+		this.vel.y = 100;
+	}
+});
+
+});
+```
+this code below defines the size of the puck along with establishes its collides as active; this means any other entity it comes into contact with will make a collision. For the puck, this is vital code to make the pong game work properly
+```js
+size: {x:48, y:48},
+	collides: ig.Entity.COLLIDES.ACTIVE,
+```
+
+this code below defines what frame the puck will change to based on its pngs animation; while its idle animation is 0.1, when it collides with another entity it will use the frames <code>[0,1,2,3,4,4,4,4,3,2,1]</code>
+```js
+this.addAnim( 'idle', 0.1, [0,1,2,3,4,4,4,4,3,2,1] );
+```
 
 <!--
 * Links you used today (websites, videos, etc)
