@@ -78,7 +78,46 @@ Of course, when i went to opengameart.org to browse their sprites, i just had to
 
 5. [Spriters Resource](https://www.spriters-resource.com/nes/legendofzelda/sheet/8366/) which i downloaded but didnt find appealing (good website though might use later)
 
-### 
+### Engineering Design Process 
+
+The process of Engineering and Design consist of eight steps 
+
+#### 1. Define the problem [x]
+   
+#### 2.Research the problem [x]
+
+#### 3.Brainstorm possible solutions [x]
+
+#### 4.Plan the most promising solution [x]
+
+#### 5.Create a prototype []
+
+#### 6.Test and evaluate the prototype [ ] 
+
+#### 7.Improve as needed [ ]
+
+#### 8.Communicate the results [ ]
+
+   Currently, i am beginning step 5. I have brainstormed and planned the idea i want to create and have done further research to expand on my knowledge on Kaboom, the tool i am using. Knowing what i know, i am creating my prototype with Kaboom. 
+
+### Skills
+
+A skill i developed was being honest and making impactful decisions (no pun intended). Impact was NOT working for me, but i knew this project was something i wanted to be well made as i was passionate about it, so ultimately i switched to kaboom 
+
+```
+developed skill *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  decision making lvl 6
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+```
+
+Another skill i developed from my previous blog breaking things down to better understand them. I was constantly making connections from kaboom to the regular js i was used to in order to better understand how it worked. 
+
+```
+developed skill *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+  breaking concepts down lvl 7
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+```
+
 
 [Previous](entry02.md) | [Next](entry04.md)
 
