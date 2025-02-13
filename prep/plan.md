@@ -1,7 +1,7 @@
 # Plan
 
-## Tool: 
-## Product: 
+## Tool: Kaboom.JS
+## Product: Coffee game: player grows and sells coffee in a shop; follows the idea of making things from scratch;  --> beyond mvp add horror to the game; the customers gradually suffer from the coffee they are sold and an infection spreads through the town; all leading back to the player who has no choice but to continue selling to progress the game and survive 
 
 ---
 
