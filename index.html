@@ -28,17 +28,14 @@
 
         kaboom({
 
+        });
+
         loadSprite("guy", "/images/gfx/character.png", {
                 sliceX: 17,
                 sliceY: 8,
 
                 anims: {
-                    "idle": {
-                        from: 18,
-                        to: 19,
-                        speed: 5,
-                        loop: true,
-                    },
+                    "idle": 18,
 
                     "run": {
                         from: 18,
@@ -46,18 +43,20 @@
                         speed: 10,
                         loop: true,
                     },
-                    "jump": 25,
+                    "jump": 24,
                 },
             })
 
-            const SPEED = 120
-            const JUMP_FORCE = 240
+            const SPEED = 900
+            const JUMP_FORCE = 800
 
             const player = add([
                 sprite("guy"),
                 pos(center()),
                 anchor("center"),
                 area(),
+                body(),
+                scale(10, 10),
             ])
 
             setGravity(640)
@@ -116,7 +115,7 @@
                 })
             })
 
-        });
+
 
         </script>
     </body>

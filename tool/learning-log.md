@@ -189,6 +189,46 @@ this code below defines what frame the puck will change to based on its pngs ani
 this.addAnim( 'idle', 0.1, [0,1,2,3,4,4,4,4,3,2,1] );
 ```
 
+### 3/2
+
+#### kaboom sprite animations
+```js
+loadSprite("guy", "/images/gfx/character.png", {
+                sliceX: 17,
+                sliceY: 8,
+```
+the code above is what i used to load my sprite first things first, slicex and slice y cuts the source img you use for the sprite so later on when you animate it, the frames are defined by what number they are after they are sliced
+
+```js
+anims: {
+                    "idle": 18,
+
+                    "run": {
+                        from: 18,
+                        to: 19,
+                        speed: 10,
+                        loop: true,
+                    },
+                    "jump": 24,
+                },
+```
+
+this code defines the animations of the sprite, from: and to: are used to define what frames will play when the action is executed; speed and loop maintain the framerate of your animation
+
+after i added all the necessary code to iterate what these animations did and when they occured, my code would not run at all. Very confusing at first but what i realized was that i forgot a very important part that rendered everything useless. Body() was something i needed to add in this piece of code
+
+```js
+            const player = add([
+                sprite("guy"),
+                pos(center()),
+                anchor("center"),
+                area(),
+                body(),
+                scale(10, 10),
+            ])
+```
+
+this basically makes sure the sprite follows the laws of gravity. and brings it back down when it jumps. In forgetting to add this, none of my code would work because gravity is literally a fundamental of the movements i was making my sprite do. 
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
