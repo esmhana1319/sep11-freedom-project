@@ -29,6 +29,58 @@ These lines of code are what kaboom uses to define the layout and connect back t
 
 My current issue with this is that the code i have now wont run due to LevelIdx being undefined, and when i comment out this code and rearrange things it runs just fine. I remembered Astrid dealing with this error previously, but we never found the specific solution as of now. My next objective is to properly define LevelIdx and afterwards implement my own designed sprites into my code. 
 
+### Sources
+
+1. Astrid
+
+2. the [kaboom website](https://kaboomjs.com/)
+
+3. [OpenGameArt](https://opengameart.org/content/zelda-like-tilesets-and-sprites) 
+
+4. [Spriters Resource](https://www.spriters-resource.com/nes/legendofzelda/sheet/8366/)
+   
+5. open game arts [key sprite](https://opengameart.org/content/key-sprite), which saved me in a hurry while i was looking for one with a transparent background
+
+### Engineering Design Process 
+
+The process of Engineering and Design consist of eight steps 
+
+#### 1. Define the problem [x]
+   
+#### 2.Research the problem [x]
+
+#### 3.Brainstorm possible solutions [x]
+
+#### 4.Plan the most promising solution [x]
+
+#### 5.Create a prototype []
+
+#### 6.Test and evaluate the prototype [ ] 
+
+#### 7.Improve as needed [ ]
+
+#### 8.Communicate the results [ ]
+
+   Currently, i am beginning step 6. I have created a prototype and am now currently testing and evaluating it for errors and bugs
+
+### Skills
+
+A skill i developed was making connections, i recognized that i was dealing with an error one of my peers mentioned before and treated it in a similar manner to which they did
+
+```
+developed skill *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ making connections lvl 7
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+```
+
+Another skill i developed from my previous blogs is looking at different sources to familiarize myself. Kabooms way of creating levels is similar to that of impact where the sprites are defined and later used to build the terrain tile by tile, and i found that it helped a lot with staring at the block of text which didnt make sense initially on my first look 
+
+```
+developed skill *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+looking at and making comparisons with different sources lvl 5
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+```
+
 
 
 
