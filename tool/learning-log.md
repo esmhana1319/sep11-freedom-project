@@ -228,7 +228,82 @@ after i added all the necessary code to iterate what these animations did and wh
             ])
 ```
 
-this basically makes sure the sprite follows the laws of gravity. and brings it back down when it jumps. In forgetting to add this, none of my code would work because gravity is literally a fundamental of the movements i was making my sprite do. 
+this basically makes sure the sprite follows the laws of gravity. and brings it back down when it jumps. In forgetting to add this, none of my code would work because gravity is literally a fundamental of the movements i was making my sprite do.
+
+### 3/23/25
+
+#### kaboom levels
+
+what ive been working on currently is learning how to define the levels of my game, along with their layouts. The way kaboom does this is through <code> const levels = </code>, where you can make the layout of your level with placeholder keys that stand in the place of sprites loaded previously.
+
+```js
+const levels = [
+                    [
+                        "===|====",
+                        "=      =",
+                        "= $    =",
+                        "=    a =",
+                        "=      =",
+                        "=   @  =",
+                        "========",
+                    ],
+                    [
+                        "--------",
+                        "-      -",
+                        "-   $  -",
+                        "|      -",
+                        "-    b -",
+                        "-  @   -",
+                        "--------",
+                    ],
+                ]
+
+                const level = addLevel(levels[levelIdx], {
+                    tileWidth: 64,
+                    tileHeight: 64,
+                    pos: vec2(64, 64),
+                    tiles: {
+                        "=": () => [
+                            sprite("floor"),
+                            area(),
+                            body({ isStatic: true }),
+                            anchor("center"),
+                        ],
+                        "-": () => [
+                            sprite("wall"),
+                            area(),
+                            body({ isStatic: true }),
+                            anchor("center"),
+                        ],
+                        "$": () => [
+                            sprite("key"),
+                            area(),
+                            anchor("center"),
+                            "key",
+                        ],
+                        "@": () => [
+                            sprite("guy"),
+                            area(),
+                            body(),
+                            anchor("center"),
+                            "player",
+                        ],
+                        "|": () => [
+                            sprite("door"),
+                            area(),
+                            body({ isStatic: true }),
+                            anchor("center"),
+                            "door",
+                        ],
+                    },
+
+```
+
+this specific snippet of my code defines two levels, of which i define through the variable levels, and leveldx. The main problem though which i discussed in my blog was that levelIdx was constantly rendered as undefined, and i found through fixing a couple incomplete parts of my code (character sprites that were badly defined) and scanning my code to make sure there were any parentheses missing.
+
+I found through my console that there was a specific line of code that was missing a parameter, which i forgot to uncomment as it was paired with code that wasnt needed. Once i finally added the parantheses that was missing my code FINALLY ran.
+
+
 <!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
