@@ -337,15 +337,23 @@
                 }
             })
 
-            ;["left", "right"].forEach((key) => {
+            onKeyDown("up", () => {
+                player.move(0, -SPEED)
+            })
+
+            onKeyDown("down", () => {
+                player.move(0, SPEED)
+            })
+
+            ;["left", "right", "down", "up"].forEach((key) => {
                  onKeyRelease(key, () => {
-                 if (player.isGrounded() && !isKeyDown("left") && !isKeyDown("right")) {
+                 if (player.isGrounded() && !isKeyDown("left") && !isKeyDown("right") && !isKeyDown("up") && !isKeyDown("down")) {
                     player.play("idle")
                 }
                })
             })
 
-        })
+
             //     const dirs = {
             //         "left": LEFT,
             //         "right": RIGHT,
@@ -362,8 +370,8 @@
             //         })
             //     }
 
-            // })
 
+            })
             scene("win", () => {
                 add([
                     text("You Win!"),
