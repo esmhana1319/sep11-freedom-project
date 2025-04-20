@@ -26,98 +26,404 @@
         import kaboom from "https://unpkg.com/kaboom@3000.0.1/dist/kaboom.mjs";
 
 
-     /*   kaboom({
+    //    kaboom({
 
-        });
+    //     });
 
-        loadSprite("guy", "/images/gfx/character.png", {
-                sliceX: 17,
-                sliceY: 8,
+    //     loadSprite("guy", "/images/gfx/character.png", {
+    //             sliceX: 17,
+    //             sliceY: 8,
 
-                anims: {
-                    "idle": 18,
+    //             anims: {
+    //                 "idle": 18,
 
-                    "run": {
-                        from: 18,
-                        to: 19,
-                        speed: 10,
-                        loop: true,
-                    },
-                    "jump": 24,
-                },
-            })
+    //                 "run": {
+    //                     from: 18,
+    //                     to: 19,
+    //                     speed: 10,
+    //                     loop: true,
+    //                 },
+    //                 "jump": 24,
+    //             },
+    //         })
 
-            const SPEED = 900
-            const JUMP_FORCE = 800
+    //         const SPEED = 900
+    //         const JUMP_FORCE = 800
 
-            const player = add([
-                sprite("guy"),
-                pos(center()),
-                anchor("center"),
-                area(),
-                body(),
-                scale(10, 10),
-            ])
+    //         const player = add([
+    //             sprite("guy"),
+    //             pos(center()),
+    //             anchor("center"),
+    //             area(),
+    //             body(),
+    //             scale(10, 10),
+    //         ])
 
-            setGravity(640)
+    //         setGravity(640)
 
-            player.play("idle")
+    //         player.play("idle")
 
-            add([
-                rect(width(), 24),
-                area(),
-                outline(1),
-                pos(0, height() - 24),
-                body({ isStatic: true }),
-            ])
+    //         add([
+    //             rect(width(), 24),
+    //             area(),
+    //             outline(1),
+    //             pos(0, height() - 24),
+    //             body({ isStatic: true }),
+    //         ])
 
-            player.onGround(() => {
-                if (!isKeyDown("left") && !isKeyDown("right")) {
-                    player.play("idle")
-                } else {
-                    player.play("run")
-                }
-            })
+    //         player.onGround(() => {
+    //             if (!isKeyDown("left") && !isKeyDown("right")) {
+    //                 player.play("idle")
+    //             } else {
+    //                 player.play("run")
+    //             }
+    //         })
 
-            player.onAnimEnd((anim) => {
-                if (anim === "idle") {
-                }
-            })
+    //         player.onAnimEnd((anim) => {
+    //             if (anim === "idle") {
+    //             }
+    //         })
 
-            onKeyPress("space", () => {
-                if (player.isGrounded()) {
-                    player.jump(JUMP_FORCE)
-                    player.play("jump")
-                }
-            })
+    //         onKeyPress("space", () => {
+    //             if (player.isGrounded()) {
+    //                 player.jump(JUMP_FORCE)
+    //                 player.play("jump")
+    //             }
+    //         })
 
-            onKeyDown("left", () => {
-                player.move(-SPEED, 0)
-                player.flipX = true
-                if (player.isGrounded() && player.curAnim() !== "run") {
-                    player.play("run")
-                }
-            })
+    //         onKeyDown("left", () => {
+    //             player.move(-SPEED, 0)
+    //             player.flipX = true
+    //             if (player.isGrounded() && player.curAnim() !== "run") {
+    //                 player.play("run")
+    //             }
+    //         })
 
-            onKeyDown("right", () => {
-                player.move(SPEED, 0)
-                player.flipX = false
-                if (player.isGrounded() && player.curAnim() !== "run") {
-                    player.play("run")
-                }
-            })
+    //         onKeyDown("right", () => {
+    //             player.move(SPEED, 0)
+    //             player.flipX = false
+    //             if (player.isGrounded() && player.curAnim() !== "run") {
+    //                 player.play("run")
+    //             }
+    //         })
 
-            ;["left", "right"].forEach((key) => {
-                 onKeyRelease(key, () => {
-                 if (player.isGrounded() && !isKeyDown("left") && !isKeyDown("right")) {
-                    player.play("idle")
-                }
-               })
-            })
+    //         ;["left", "right"].forEach((key) => {
+    //              onKeyRelease(key, () => {
+    //              if (player.isGrounded() && !isKeyDown("left") && !isKeyDown("right")) {
+    //                 player.play("idle")
+    //             }
+    //            })
+    //         })
 
-            */
+    //
 
-            // simple rpg style walk and talk
+    //
+
+
+//             kaboom({
+//                 background: [74, 48, 82],
+//             })
+
+//             loadSprite("floor1", "images/coffeesprites/soilfloor.png")
+//             loadSprite("floor2", "images/coffeesprites/floorish.png")
+//             loadSprite("floor3", "images/coffeesprites/floorr.png")
+
+//             loadSprite("trc", "images/coffeesprites/toprightcorn.png")
+//             loadSprite("tlc", "images/coffeesprites/topleftcorn.png")
+//             loadSprite("mtw", "images/coffeesprites/midtopwall.png")
+
+//             loadSprite("lw", "images/coffeesprites/leftwall.png")
+//             loadSprite("rw", "images/coffeesprites/rightwall.png")
+
+//             loadSprite("brc", "images/coffeesprites/botrightcorn.png")
+//             loadSprite("blc", "images/coffeesprites/botleftcorn.png")
+//             loadSprite("mbw", "images/coffeesprites/botmidcorn.png")
+
+//             loadSprite("door", "images/coffeesprites/thedoor.png")
+
+//             loadSprite("key", "images/coffeesprites/coffeeplant.png")
+//             loadSprite("key2", "images/coffeesprites/coffeebeans.png")
+//             loadSprite("key3", "images/coffeesprites/coffeeglass.png")
+
+//             loadSprite("person1", "images/gfx/npc.png")
+//             loadSprite("person2", "images/gfx/npc.png")
+//             loadSprite("person3", "images/gfx/npc.png")
+
+//             loadSprite("gal", "images/coffeesprites/spritesheet.png", {
+//                 sliceX: 2,
+//                 sliceY: 2,
+
+//                 anims: {
+//                     "r": 3,
+
+//                     "l": 2,
+
+//                     "t": 4,
+
+//                     "d": 1,
+//                 },
+//             })
+
+//             scene("main", (levelIdx) => {
+
+//                 const SPEED = 320
+
+
+//                 const characters = {
+//                     "p": {
+//                         sprite: "person1",
+//                         msg: "collect the coffee plant to go to the next level",
+//                     },
+//                     "o": {
+//                         sprite: "person2",
+//                         msg: "collect the coffee beans to go to the last level",
+//                     },
+//                     "m": {
+//                         sprite: "person2",
+//                         msg: "collect the glass of coffee to win",
+//                     },
+//                 }
+
+//                 const levels = [
+//                     [
+//                         "cuuu|uuuud",
+//                         "l        r",
+//                         "l        r",
+//                         "l      $ r",
+//                         "l  p     r",
+//                         "l        r",
+//                         "l   @    r",
+//                         "awwwwwwwwb",
+//                     ],
+//                     [
+//                         "cuuuuuuuud",
+//                         "l   @    r",
+//                         "l        r",
+//                         "l  o     r",
+//                         "l        r",
+//                         "l     $  r",
+//                         "l        r",
+//                         "awww|wwwwb",
+//                     ],
+//                     [
+//                         "cuuu|uuuud",
+//                         "l        r",
+//                         "l   $    r",
+//                         "l        r",
+//                         "l  m     r",
+//                         "l        r",
+//                         "l    @   r",
+//                         "awwwwwwwwb",
+//                     ],
+//                 ]
+
+//                 const level = addLevel(levels[levelIdx], {
+//                     tileWidth: 16,
+//                     tileHeight: 16,
+//                     pos: vec2(16, 16),
+//                     tiles: {
+//                             tiles: {
+//                                 "$": () => [
+//                                     sprite("key"),
+//                                     area(),
+//                                     anchor("center"),
+//                                     "key",
+//                                 ],
+//                                 // "#": () => [
+//                                     // sprite("coffeebeans"),
+//                                     // area(),
+//                                     // anchor("center"),
+//                                     // "key",
+//                                 // ],
+//                                 // "%": () => [
+//                                     // sprite("coffeeglass"),
+//                                     // area(),
+//                                     // anchor("center"),
+//                                     // "key",
+//                                 // ],
+//                                 "@": () => [
+//                                     sprite("gal"),
+//                                     area(),
+//                                     body(),
+//                                     anchor("center"),
+//                                     "player",
+//                                 ],
+//                                 "|": () => [
+//                                     sprite("door"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     anchor("center"),
+//                                     "door",
+//                                 ],
+//                                 "a": () => [
+//                                     sprite("blc"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                                 "b": () => [
+//                                     sprite("brc"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                                 "c": () => [
+//                                     sprite("tlc"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                                 "d": () => [
+//                                     sprite("trc"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                                 "w": () => [
+//                                     sprite("mbw"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                                 "u": () => [
+//                                     sprite("mtw"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                                 "l": () => [
+//                                     sprite("lw"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                                 "r": () => [
+//                                     sprite("rw"),
+//                                     area(),
+//                                     body({ isStatic: true }),
+//                                     // tile({ isObstacle: true }),
+//                                 ],
+//                             },
+//                     },
+
+//                     wildcardTile(ch) {
+//                         const char = characters[ch]
+//                         if (char) {
+//                             return [
+//                                 sprite(char.sprite),
+//                                 area(),
+//                                 body({ isStatic: true }),
+//                                 anchor("center"),
+//                                 "character",
+//                                 { msg: char.msg },
+//                             ]
+//                         }
+//                     },
+//             })
+
+
+//                 const player = level.get("player")[0]
+
+//                 function addDialog() {
+//                     const h = 160
+//                     const pad = 16
+//                     const bg = add([
+//                         pos(0, height() - h),
+//                         rect(width(), h),
+//                         color(0, 0, 0),
+//                         z(100),
+//                     ])
+//                     const txt = add([
+//                         text("", {
+//                             width: width(),
+//                         }),
+//                         pos(0 + pad, height() - h + pad),
+//                         z(100),
+//                     ])
+//                     bg.hidden = true
+//                     txt.hidden = true
+//                     return {
+//                         say(t) {
+//                             txt.text = t
+//                             bg.hidden = false
+//                             txt.hidden = false
+//                         },
+//                         dismiss() {
+//                             if (!this.active()) {
+//                                 return
+//                             }
+//                             txt.text = ""
+//                             bg.hidden = true
+//                             txt.hidden = true
+//                         },
+//                         active() {
+//                             return !bg.hidden
+//                         },
+//                         destroy() {
+//                             bg.destroy()
+//                             txt.destroy()
+//                         },
+//                     }
+//                 }
+
+//                 let hasKey = false
+//                 const dialog = addDialog()
+
+//                 // player.onCollide("key", (key) => {
+//                 //     destroy(key)
+//                 //     hasKey = true
+//                 // })
+
+//                 // player.onCollide("door", () => {
+//                 //     if (hasKey) {
+//                 //         if (levelIdx + 1 < levels.length) {
+//                 //             go("main", levelIdx + 1)
+//                 //         } else {
+//                 //             go("win")
+//                 //         }
+//                 //     } else {
+//                 //         dialog.say("you dont have the item needed to pass this level!")
+//                 //     }
+//                 // })
+
+//                 // player.onCollide("character", (ch) => {
+//                 //     dialog.say(ch.msg)
+//                 // })
+
+
+//                 // onKeyDown("left", () => {
+//                 //     player.move(-SPEED, 0)
+//                 //     // player.play("l")
+
+//                 // })
+
+//                 // onKeyDown("right", () => {
+//                 //     player.move(SPEED, 0)
+//                 //     // player.play("r")
+
+//                 // })
+
+//                 // onKeyDown("up", () => {
+//                 //     player.move(0, -SPEED)
+//                 //     // player.play("t")
+//                 // })
+
+//                 // onKeyDown("down", () => {
+//                 //     player.move(0, SPEED)
+//                 //     // player.play("d")
+//                 // })
+
+//             })
+
+//             scene("win", () => {
+//                 add([
+//                     text("You Win!"),
+//                     pos(width() / 2, height() / 2),
+//                     anchor("center"),
+//                 ])
+//             })
+
+//             go("main", 0)
 
 
             kaboom({
@@ -146,6 +452,42 @@
                 },
             })
 
+            loadSprite("trc", "images/coffeesprites/toprightcorn.png")
+            loadSprite("tlc", "images/coffeesprites/topleftcorn.png")
+            loadSprite("mtw", "images/coffeesprites/midtopwall.png")
+
+            loadSprite("lw", "images/coffeesprites/leftwall.png")
+            loadSprite("rw", "images/coffeesprites/rightwall.png")
+
+            loadSprite("brc", "images/coffeesprites/botrightcorn.png")
+            loadSprite("blc", "images/coffeesprites/botleftcorn.png")
+            loadSprite("mbw", "images/coffeesprites/botmidcorn.png")
+
+            loadSprite("door", "images/coffeesprites/thedoor.png")
+
+            loadSprite("key", "images/coffeesprites/coffeeplant.png")
+            loadSprite("key2", "images/coffeesprites/coffeebeans.png")
+            loadSprite("key3", "images/coffeesprites/coffeeglass.png")
+
+            loadSprite("person1", "images/gfx/npc.png")
+            loadSprite("person2", "images/gfx/npc.png")
+            loadSprite("person3", "images/gfx/npc.png")
+
+            loadSprite("gal", "images/coffeesprites/spritesheet.png", {
+                sliceX: 2,
+                sliceY: 2,
+
+                anims: {
+                    "r": 2,
+
+                    "l": 1,
+
+                    "t": 0,
+
+                    "d": 3,
+                },
+            })
+
             // scene("main", (levelIdx) => {
             //     const SPEED = 320
             // })
@@ -154,65 +496,125 @@
 
                 const SPEED = 320
 
-
                 const characters = {
-                    "a": {
+                    "p": {
                         sprite: "person1",
-                        msg: "collect the key to open the door",
+                        msg: "collect the coffee plant to go to the next level",
                     },
-                    "b": {
+                    "o": {
                         sprite: "person2",
-                        msg: "after this room, youll win!",
+                        msg: "collect the coffee beans to go to the last level",
+                    },
+                    "m": {
+                        sprite: "person2",
+                        msg: "collect the glass of coffee to win",
                     },
                 }
 
+                // const characters = {
+                //     "a": {
+                //         sprite: "person1",
+                //         msg: "collect the key to open the door",
+                //     },
+                //     "b": {
+                //         sprite: "person2",
+                //         msg: "after this room, youll win!",
+                //     },
+                // }
+
                 const levels = [
-                    [
-                        "===|====",
-                        "=      =",
-                        "= $    =",
-                        "=    a =",
-                        "=      =",
-                        "=   @  =",
-                        "========",
+                        [
+                        "cuuu|uuuud",
+                        "l        r",
+                        "l        r",
+                        "l      $ r",
+                        "l  p     r",
+                        "l        r",
+                        "l   @    r",
+                        "awwwwwwwwb",
                     ],
                     [
-                        "--------",
-                        "-      -",
-                        "-   $  -",
-                        "|      -",
-                        "-    b -",
-                        "-  @   -",
-                        "--------",
+                        "cuuuuuuuud",
+                        "l   @    r",
+                        "l        r",
+                        "l  o     r",
+                        "l        r",
+                        "l    $   r",
+                        "l        r",
+                        "awww|wwwwb",
+                    ],
+                    [
+                        "cuuu|uuuud",
+                        "l        r",
+                        "l        r",
+                        "l      $ r",
+                        "l  m     r",
+                        "l        r",
+                        "l   @    r",
+                        "awwwwwwwwb",
                     ],
                 ]
 
                 const level = addLevel(levels[levelIdx], {
-                    tileWidth: 64,
-                    tileHeight: 64,
+                    tileWidth: 44,
+                    tileHeight: 44,
                     pos: vec2(64, 64),
                     tiles: {
-                        "=": () => [
-                            sprite("floor"),
-                            area(),
-                            body({ isStatic: true }),
-                            anchor("center"),
-                        ],
-                        "-": () => [
-                            sprite("wall"),
-                            area(),
-                            body({ isStatic: true }),
-                            anchor("center"),
-                        ],
+                        // "=": () => [
+                        //     sprite("floor"),
+                        //     area(),
+                        //     body({ isStatic: true }),
+                        //     anchor("center"),
+                        // ],
+                        // "-": () => [
+                        //     sprite("wall"),
+                        //     area(),
+                        //     body({ isStatic: true }),
+                        //     anchor("center"),
+                        // ],
+                        // "$": () => [
+                        //     sprite("key"),
+                        //     area(),
+                        //     anchor("center"),
+                        //     "key",
+                        // ],
+                        // "@": () => [
+                        //     sprite("guy"),
+                        //     area(),
+                        //     body(),
+                        //     anchor("center"),
+                        //     "player",
+                        // ],
+                        // "|": () => [
+                        //     sprite("door"),
+                        //     area(),
+                        //     body({ isStatic: true }),
+                        //     anchor("center"),
+                        //     "door",
+                        // ],
+                        // "%": () => [
+                        //     sprite("key"),
+                        //     area(),
+                        //     anchor("center"),
+                        //     "key",
+                        // ],
+                        // "#": () => [
+                            // sprite("coffeebeans"),
+                            // area(),
+                            // anchor("center"),
+                            // "key",
+                        // ],
                         "$": () => [
                             sprite("key"),
                             area(),
+                            scale(0.3),
                             anchor("center"),
                             "key",
                         ],
                         "@": () => [
-                            sprite("guy"),
+                            sprite("gal"),
                             area(),
+                            scale(0.2),
                             body(),
                             anchor("center"),
                             "player",
@@ -220,9 +622,66 @@
                         "|": () => [
                             sprite("door"),
                             area(),
+                            scale(0.3),
                             body({ isStatic: true }),
                             anchor("center"),
                             "door",
+                        ],
+                        "a": () => [
+                            sprite("blc"),
+                            scale(0.3),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
+                        ],
+                        "b": () => [
+                            sprite("brc"),
+                            scale(0.3),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
+                        ],
+                        "c": () => [
+                            sprite("tlc"),
+                            scale(0.3),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
+                        ],
+                        "d": () => [
+                            sprite("trc"),
+                            scale(0.3),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
+                        ],
+                        "w": () => [
+                            sprite("mbw"),
+                            scale(0.3),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
+                        ],
+                        "u": () => [
+                            sprite("mtw"),
+                            scale(0.3),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
+                        ],
+                        "l": () => [
+                            sprite("lw"),
+                            scale(0.3),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
+                        ],
+                        "r": () => [
+                            sprite("rw"),
+                            scale(0.35),
+                            area(),
+                            body({ isStatic: true }),
+                            // tile({ isObstacle: true }),
                         ],
                     },
 
@@ -307,51 +766,54 @@
                     }
                 })
 
-                player.onGround(() => {
-                if (!isKeyDown("left") && !isKeyDown("right")) {
-                    player.play("idle")
-                } else {
-                    player.play("run")
-                }
-            })
+                player.onCollide("character", (ch) => {
+                    dialog.say(ch.msg)
+                })
 
-            player.onAnimEnd((anim) => {
-                if (anim === "idle") {
-                }
-            })
+            //     player.onGround(() => {
+            //     if (isKeyDown("left")){
+            //         player.play("l")
+            //     }
+            //     if (isKeyDown("right")){
+            //         player.play("r")
+            //     }
+            //     if (isKeyDown("up")){
+            //         player.play("t")
+            //     }
+            //     if (isKeyDown("down")){
+            //         player.play("d")
+            //     }
+            // })
+
 
 
             onKeyDown("left", () => {
                 player.move(-SPEED, 0)
-                player.flipX = true
-                if (player.isGrounded() && player.curAnim() !== "run") {
-                    player.play("run")
-                }
+                player.play("l")
             })
 
             onKeyDown("right", () => {
                 player.move(SPEED, 0)
-                player.flipX = false
-                if (player.isGrounded() && player.curAnim() !== "run") {
-                    player.play("run")
-                }
+                player.play("r")
             })
 
             onKeyDown("up", () => {
                 player.move(0, -SPEED)
+                player.play("t")
             })
 
             onKeyDown("down", () => {
                 player.move(0, SPEED)
+                player.play("d")
             })
 
-            ;["left", "right", "down", "up"].forEach((key) => {
-                 onKeyRelease(key, () => {
-                 if (player.isGrounded() && !isKeyDown("left") && !isKeyDown("right") && !isKeyDown("up") && !isKeyDown("down")) {
-                    player.play("idle")
-                }
-               })
-            })
+            // ;["left", "right", "down", "up"].forEach((key) => {
+            //      onKeyRelease(key, () => {
+            //      if (player.isGrounded() && !isKeyDown("left") && !isKeyDown("right") && !isKeyDown("up") && !isKeyDown("down")) {
+            //         player.play("idle")
+            //     }
+            //    })
+            // })
 
 
             //     const dirs = {
