@@ -1,7 +1,7 @@
 # Entry 5
 ##### 4/26/25
 
-### Previous Buisness with kaboom + progress beyond
+### Previous Buisness with kaboom + progress towards MVP
 
 Previously, i faced struggles with my game not running due to specific errors with variables. The variable defining my level index was registered as undefined when i would preview. I found the reason for this was similar to the problem i had before and that it was a result of a parentheses being unclosed, causing my code to break. 
 
@@ -25,7 +25,67 @@ My second challenge, aside from resizing everything to my liking (which i dont t
 
 The only difference between this error though and my previous errors was that all of my code seemed to be working fine. My first option in troubleshooting was to ask peers if they experienced a similar problem, which they hadnt. Then i took the initiative to comment out specific parts of my code after making sure all parantheses were closed, functions matched kabooms source, and tags were properly called. The only way my code would work was when the collide functions were gone, which ultimately stripped my game of its purpose. My way to solve this was by ultimately starting over. I went back to my previous log, pasted that code in, and followed my previous steps. Essentially in combining my current code and my old code, i was able to take what worked and filter out what didnt from either save. 
 
-After a couple final touches to the scales of sprites, and some tinkering with their locations, i finally reached my MVP :D
+
+### future buisness 
+
+After a couple final touches to the scales of sprites, and some tinkering with their locations, i finally reached my MVP :D. My next objective for my MVP though is to tinker with my games features, add more sprites, and maybe soundtracks and sound effects. 
+
+### Sources
+
+1. My peers: shoutout to Chris, Astrid, Qilin, Ellen, and XinYang. Although i never found a brief solution to the collision problem i faced, their advice to start from scratch really helped 
+
+2. the [kaboom website](https://kaboomjs.com/)
+
+3. [OpenGameArt](https://opengameart.org/content/zelda-like-tilesets-and-sprites) 
+
+4. [Spriters Resource](https://www.spriters-resource.com/nes/legendofzelda/sheet/8366/)
+   
+5. [piskel](https://www.piskelapp.com/p/create/sprite)
+
+
+### Engineering Design Process 
+
+The process of Engineering and Design consist of eight steps 
+
+#### 1. Define the problem [x]
+   
+#### 2.Research the problem [x]
+
+#### 3.Brainstorm possible solutions [x]
+
+#### 4.Plan the most promising solution [x]
+
+#### 5.Create a prototype [x]
+
+#### 6.Test and evaluate the prototype [x] 
+
+#### 7.Improve as needed [x]
+
+#### 8.Communicate the results [ ]
+
+   Currently, i am beginning step 7. I have created a prototype and tested and evaluated it for any errors and bugs. To go beyond my MVP i will improve it as needed to my liking 
+
+### Skills
+
+A skill i developed was making connections, i recognized that i was dealing with an error similar to one that i had during a previous learning log, and solved it in a similar manner. 
+
+```
+developed skill *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ making connections lvl 10
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+```
+
+Another skill i developed was starting from scratch when problems that arised were 'unsolveable'. By starting over from my previous save to see what went right, i was able to combine my current code to my old code and make my MVP work as planned 
+
+```
+developed skill *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+starting over and refrencing past work to improve new ones lvl 4
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+```
+
+
+
+
 
 
 
